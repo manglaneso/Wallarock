@@ -17,7 +17,6 @@ import org.springframework.web.client.RestTemplate;
 import chat.Chat;
 import chat.ChatOperands;
 import client.Users;
-import login.LoginResult;
 import search.SimpleSearchOperands;
 
 @Controller

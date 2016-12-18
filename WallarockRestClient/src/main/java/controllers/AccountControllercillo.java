@@ -22,9 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import catalog.Product;
 import client.Users;
 import login.LoginOperands;
-import login.LoginResult;
 import register.RegisterOperands;
-import register.RegisterResult;
 import search.SimpleSearchOperands;
 
 @Controller
@@ -39,6 +37,7 @@ public class AccountControllercillo {
 			Users result = restTemplate.postForObject("http://localhost:8010/client/modifyuser/", operands, Users.class);
 			session.setAttribute("credentialresult", result);
 			model.addAttribute("simplesearch", new SimpleSearchOperands());
+			@SuppressWarnings("unchecked")
 			List<Product> a = restTemplate.getForObject("http://localhost:8020/catalog/topsixbyprice/", ArrayList.class);
 			model.addAttribute("products", a);
 			return "HomepageLogged";

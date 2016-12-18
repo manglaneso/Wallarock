@@ -26,7 +26,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import catalog.Product;
 import client.Users;
-import login.LoginResult;
 import search.SimpleSearchOperands;
 
 @Controller
